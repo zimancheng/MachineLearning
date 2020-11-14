@@ -116,15 +116,60 @@ def build_tree(dataset, ftr_list):
     best_ftr_ind = choose_best_split_feature(dataset)
     best_ftr = ftr_list[best_ftr_ind]
     
-    ftr_list.remove(best_ftr)
-    ftr_vals = [example[best_ftr_ind] for example in dataset]
+    # create a new list so that the original feature list is not messed up
+    sub_ftr_list = ftr_list[:best_ftr_ind] + ftr_list[best_ftr_ind + 1:]
+    ftr_vals = [example[best_ftr_ind] for example in dataset] 
     uniq_ftr_val = set(ftr_vals)
 
     tree = {best_ftr:{}} # {best_ftr:{value1: subtree, value2: subtree, ...}}
     for val in uniq_ftr_val:
-        sub_ftr_list = ftr_list[:]
-        tree[best_ftr][val] = build_tree(split_dataset_by_ftr_val(dataset, best_ftr_ind, val),\
-                                         sub_ftr_list)
+        tree[best_ftr][val] = build_tree(split_dataset_by_ftr_val(dataset, best_ftr_ind, val),
+                                         sub_ftr_list[:]) # still create a new list, do not pass the list as reference
     return tree
 
+def classify(tree, ftr_list, test_vec):
+    """
+        Function:classify
+        Classify the test vector's class based on the prebuilt tree on training dataset
+        :params:tree - a nested dict
+        :params:ftr_list - a list containing all feature names
+        :params:test_vec - a list representing the test case
+        :return:the predicted class as string
+    """
+    fir_ftr = list(tree)[0]
+    subtree = tree[fir_ftr]
+    ind = ftr_list.index(fir_ftr) # get the index of the first splitting feature in tree
+
+    for key in subtree.keys():
+        if test_vec[ind] == key:
+            if type(subtree[key]).__name__ == 'dict':
+                return classify(subtree[key], ftr_list, test_vec)
+            else: 
+                return subtree[key]
+    
+def store_tree(tree, filename):
+    """
+        Function:store_tree
+        Serialize the tree structure and write into a txt file
+        :params:tree - a nested dict to be serialized
+        :params:filename - a string containing the txt filename for storage
+        :return:none
+    """
+    import pickle
+    fw = open(filename, "wb")
+    pickle.dump(tree, fw)
+    fw.close()
+
+def grab_tree(filename):
+    """
+        Function:grab_tree
+        Unserialize the tree from a txt file
+        :params:filename - a string containing the txt filename with tree stored in it
+        :return:a nested dict as tree
+    """
+    import pickle
+    fr = open(filename, "rb")
+    result = pickle.load(fr)
+    fr.close()
+    return result
 
