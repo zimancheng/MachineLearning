@@ -109,9 +109,9 @@ def smo_simplified(dataset, labels, C, tolerance, max_iter):
                 alpha[i] += labels[i] * labels[j] * (alpha_j_pre - alpha[j])    # update alpha i by the same amount as j
 
                 # update b
-                b1 = b - err_i - labels[i] * (alpha[i] - alpha_i_pre) * dataset[i].dot(dataset[i]) \ 
+                b1 = b - err_i - labels[i] * (alpha[i] - alpha_i_pre) * dataset[i].dot(dataset[i]) \
                                - labels[j] * (alpha[j] - alpha_j_pre) * dataset[j].dot(dataset[i])
-                b2 = b - err_j - labels[i] * (alpha[i] - alpha_i_pre) * dataset[i].dot(dataset[j]) \ 
+                b2 = b - err_j - labels[i] * (alpha[i] - alpha_i_pre) * dataset[i].dot(dataset[j]) \
                                - labels[j] * (alpha[j] - alpha_j_pre) * dataset[j].dot(dataset[j])
                 if 0 < alpha[i] and alpha[i] < C:
                     b = b1
@@ -132,3 +132,33 @@ def smo_simplified(dataset, labels, C, tolerance, max_iter):
     
     return alpha, b
         
+def plot_model(dataset, labels, alpha, b, save_path):
+    """Plot the SVM classifier and support vectors
+    
+    Args:
+        dataset: ndarray of x matrix. Shape (m, n)
+        labels: array of labels. Shape (m,)
+        alpha: array of alpha parameters
+        b: intercept parameter. Integer
+    """
+    w = dataset.T.dot(alpha*labels)
+    sup_vec = dataset[alpha > 0, :]
+
+    fig, ax = plt.subplots()
+    ax.plot(dataset[labels==1, 0], dataset[labels==1, 1], "bx", linewidth=2)
+    ax.plot(dataset[labels==-1, 0], dataset[labels==-1, 1], 'go', linewidth=2)
+    x1 = np.arange(min(dataset[:, 0])*0.8, max(dataset[:, 0])*1.2, 0.01)  # 20% margin
+    x2 = -(b + w[0] * x1) / w[1]
+    ax.plot(x1, x2, c = 'red', linewidth=2)
+    ax.set_ylim(-7, 7)
+
+    for i in range(sup_vec.shape[0]):
+        ax.scatter(sup_vec[i, 0], sup_vec[i, 1], color='', marker='o', edgecolors='orange', s=200)
+    
+    plt.savefig(save_path)
+    plt.show()
+
+if __name__ == "__main__":
+    dataset, labels = load_dataset('testSet.txt')
+    alpha, b = smo_simplified(dataset, labels, 0.6, 0.001, 200)
+    plot_model(dataset, labels, alpha, b, 'svm_simplified.png')
