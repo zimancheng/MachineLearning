@@ -191,7 +191,7 @@ def inner_loop_ker(i, ds):
         
         if 0 < ds.alpha[i] and ds.alpha[i] < ds.C:
             ds.b = b1
-        elif 0 < alpha[j] and alpha[j] < ds.C:
+        elif 0 < ds.alpha[j] and ds.alpha[j] < ds.C:
             ds.b = b2
         else:
             ds.b = (b1 + b2) / 2
@@ -208,7 +208,7 @@ if __name__=='__main__':
     sv = dat[alpha3 > 0]   # support vectors
     sv_label = lbl[alpha3 > 0]
     m = len(alpha3)
-    k = np.zeros(m)
+    # k = np.zeros(m)
 
     # training error
     err_cnt = 0

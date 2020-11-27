@@ -161,7 +161,7 @@ def inner_loop(i, ds):
         
         if 0 < ds.alpha[i] and ds.alpha[i] < ds.C:
             ds.b = b1
-        elif 0 < alpha[j] and alpha[j] < ds.C:
+        elif 0 < ds.alpha[j] and ds.alpha[j] < ds.C:
             ds.b = b2
         else:
             ds.b = (b1 + b2) / 2
