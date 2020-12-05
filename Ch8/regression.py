@@ -138,7 +138,7 @@ def ridreg_test(train_path, save_path):
 #     norm_datset = normalization(dataset)
 #     norm_labels = normalization(labels)
     std_dataset = standardization(dataset)
-    std_labels = standardization(labels)
+    std_labels = labels - np.mean(labels)
 
     num_tests = 30
     theta_mat = np.zeros((num_tests, dataset.shape[1]))
@@ -154,6 +154,53 @@ def ridreg_test(train_path, save_path):
 
     return theta_mat
 
+def stage_wise_regression(file_path, save_path, eps=0.01, num_iter=100):
+    """Fit StageWise Linear Regression on input dataset.
+    
+    Args:
+        file_path: path to the txt file containing dataset and labels
+        eps: stepsize of parameter learning. Float number
+        num_iter: number of iterations
+    Returns:
+        theta: array of model parameters. Shape (n,)
+    """
+    dataset, labels = load_dataset(file_path)
+    std_dataset = standardization(dataset)
+    std_labels = labels - np.mean(labels)
+
+    m, n = dataset.shape
+    theta_mat = np.zeros((num_iter, n))
+    theta_prev = np.zeros(n)
+    best_theta = np.zeros(n)
+
+    for i in range(num_iter):
+        min_rss = float('inf')
+
+        for j in range(n):
+            for sign in [-1, 1]:
+                theta = np.copy(theta_prev)
+                theta[j] += sign * eps
+
+                y_pred = std_dataset.dot(theta)
+                rss = calculate_rss(std_labels, y_pred)
+
+                if rss < min_rss:
+                    min_rss = rss
+                    best_theta = theta
+
+        theta_prev = np.copy(best_theta)
+        theta_mat[i] = theta_prev
+
+    fig, ax = plt.subplots()
+    ax.plot(theta_mat)
+    plt.xlabel('log(lambda)')
+    plt.ylabel('theta')
+    plt.savefig(save_path)
+    
+    return theta_mat
+
+
+
 
 
 
@@ -163,3 +210,12 @@ if __name__ == '__main__':
     # lwr_test('abalone.txt', [0.1, 1, 10])
 
     ridreg_test('abalone.txt', 'ridge_regression.png')
+
+    stage_wise_regression('abalone.txt', 'stagewise_regression_2000.png', 0.01, 2000)
+    # # Compare to linear regression results
+    # dataset, labels = load_dataset('abalone.txt')
+    # std_dataset = standardization(dataset)
+    # std_labels = labels - np.mean(labels)
+    # linear_regression(std_dataset, std_labels)
+
+    
