@@ -1,0 +1,69 @@
+Dolphin II	10860 SW Beaverton-Hillsdale Hwy	Beaverton, OR	45.486159	-122.788435
+Hotties	10140 SW Canyon Rd.	Beaverton, OR	45.492826	-122.781169
+Pussycats	8666a SW Canyon Road	Beaverton, OR	45.4980417	-122.766375
+Stars Cabaret	4570 Lombard Ave	Beaverton, OR	45.4859	-122.799858
+Sunset Strip	10205 SW Park Way	Beaverton, OR	45.508052	-122.780155
+Vegas VIP Room	10018 SW Canyon Rd	Beaverton, OR	45.493121	-122.779941
+Full Moon Bar and Grill	28014 Southeast Wally Road	Boring, OR	45.430195	-122.374828
+505 Club	505 Burnside Rd	Gresham, OR	45.510769	-122.436996
+Dolphin	17180 McLoughlin Blvd	Milwaukie, OR	45.3997888	-122.61832
+Dolphin III	13305 SE McLoughlin BLVD	Milwaukie, OR	45.426789	-122.635022
+Acropolis	8325 McLoughlin Blvd	Portland, OR	45.46245	-122.639157
+Blush	5145 SE McLoughlin Blvd	Portland, OR	45.48533	-122.647076
+Boom Boom Room	8345 Barbur Blvd	Portland, OR	45.464678	-122.699948
+Bottoms Up	16900 Saint Helens Rd	Portland, OR	45.646742	-122.842216
+Cabaret II	17544 Stark St	Portland, OR	45.518907	-122.48248
+Cabaret Lounge	503 W Burnside	Portland, OR	45.52324	-122.675739
+Carnaval	330 SW 3rd Avenue	Portland, OR	45.5204877	-122.6741732
+Casa Diablo	2839 NW St. Helens Road	Portland, OR	45.542933	-122.72135
+Chantilly Lace	6723 Killingsworth St	Portland, OR	45.563215	-122.593027
+Club 205	9939 Stark St	Portland, OR	45.519248	-122.561408
+Club Rouge	403 SW Stark	Portland, OR	45.520742	-122.675682
+Dancin' Bare	8440 Interstate Ave	Portland, OR	45.584288	-122.686393
+Devil's Point	5305 SE Foster Rd	Portland, OR	45.495295	-122.607855
+Double Dribble	13550 Southeast Powell Boulevard	Portland, OR	45.497612	-122.524063
+Dream on Saloon	15920 Stark St	Portland, OR	45.5189535	-122.4992958
+DV8	5003 Powell Blvd	Portland, OR	45.4928217	-122.4826233
+Exotica	240 Columbia Blvd	Portland, OR	45.581137	-122.662701
+Frolics	8845 Sandy Blvd	Portland, OR	45.555595	-122.571558
+G-Spot Airport	8654 Sandy Blvd	Portland, OR	45.554307	-122.573502
+G-Spot Northeast	3400 NE 82nd Ave	Portland, OR	45.547313	-122.578462
+G-Spot Southeast	5241 SE 72nd Ave	Portland, OR	45.484753	-122.589419
+Glimmers	3532 Powell Blvd	Portland, OR	45.496747	-122.627887
+Golden Dragon Exotic Club	324 SW 3rd Ave	Portland, OR	45.520412	-122.674072
+Heat	12131 SE Holgate Blvd.	Portland, OR	45.489995	-122.538316
+Honeysuckle's Lingerie	3520 82nd Ave	Portland, OR	45.548565	-122.578534
+Hush Playhouse	13560 Powell Blvd	Portland, OR	45.497528	-122.52397
+JD's Bar &amp; Grill	4523 NE 60th Ave	Portland, OR	45.555854	-122.601174
+Jody's Bar And Grill	12035 Glisan St	Portland, OR	45.526606	-122.538733
+Landing Strip	6210 Columbia Blvd	Portland, OR	45.59475841786858	-122.72781630025534
+Lucky Devil Lounge	633 SE Powell Blvd	Portland, OR	45.501756	-122.659093
+Lure	11051 Barbur Blvd	Portland, OR	45.4459883	-122.7313733
+Magic Garden	217 4th Ave	Portland, OR	45.52484	-122.674685
+Mary's Club	129 Broadway	Portland, OR	45.522756	-122.677968
+Montego's	15826 SE Division	Portland, OR	45.50431	-122.499776
+Mr. Peeps	709 122nd Ave	Portland, OR	45.517466	-122.538145
+Mynt Gentlemen's Club	3390 NE Sandy Blvd	Portland, OR	45.532067	-122.628966
+Mystic	9950 SE Stark St.	Portland, OR	45.518595	-122.562034
+Nicolai Street Clubhouse	2460 24th Ave	Portland, OR	45.54012810078829	-122.6410771862925
+Oh Zone	6218 Columbia Blvd	Portland, OR	45.594763512099284	-122.72784287370689
+Pallas Club	13639 Powell Blvd	Portland, OR	45.498286	-122.522838
+Pirates Cove	7427 Sandy Blvd	Portland, OR	45.5494817	-122.58643
+Private Pleasures	10931 53rd Ave	Portland, OR	45.446268	-122.731322
+Pussycats	3414 Northeast 82nd Avenue	Portland, OR	45.547415	-122.578464
+Riverside Corral	545 Tacoma St	Portland, OR	45.464613	-122.660347
+Rooster's	605 Columbia Blvd	Portland, OR	45.57770112000487	-122.64883202172743
+Rose City Strip	3620 35th Pl	Portland, OR	45.496476	-122.627113
+Safari Show Club	3000 SE Powell Blvd	Portland, OR	45.496816	-122.6342678
+Sassy's Bar &amp; Grill	927 Morrison St	Portland, OR	45.517463	-122.656097
+Secret Rendezvous	12503 Division St	Portland, OR	45.504467	-122.534825
+Shimmers	7944 Foster Rd	Portland, OR	45.483632	-122.581766
+Soobie's	333 SE 122nd Ave	Portland, OR	45.519891	-122.538038
+Spyce Gentleman's Club	33 NW 2nd Ave	Portland, OR	45.523708	-122.672622
+Sugar Shack	6732 Killingsworth St	Portland, OR	45.562617385423295	-122.58508276705511
+The Hawthorne Strip	1008 Hawthorne Blvd	Portland, OR	45.511996	-122.655486
+Tommy's Too	10335 Foster Rd	Portland, OR	45.476915	-122.556632
+Union Jacks	938 Burnside St	Portland, OR	45.522788	-122.655887
+Video Visions	6723 Killingsworth St	Portland, OR	45.563215	-122.593027
+Stars Cabaret Bridgeport	17939 SW McEwan Rd	Tigard, OR	45.395346	-122.746204
+Jiggles	7455 SW Nyberg St	Tualatin, OR	45.3838167	-122.7531567
